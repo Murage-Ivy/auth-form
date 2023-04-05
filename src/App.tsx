@@ -8,11 +8,11 @@ import { UserContextProvider } from './context/UserContext';
 function App() {
   return (
     <div className="App">
-      {/* <UserContextProvider>
-        <Loginform />
+      <UserContextProvider>
+        <SignForm />
+        {/* <Loginform /> */}
+      </UserContextProvider>
 
-      </UserContextProvider> */}
-      <SignForm />
     </div>
   );
 }

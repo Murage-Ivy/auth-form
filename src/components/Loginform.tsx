@@ -17,13 +17,14 @@ function Loginform() {
                     <input type="text"
                         name="username"
                         id="username"
+                        autoComplete='username'
                         placeholder="Username"
                         value={loggedUser?.username}
                         onChange={handleChangeLogin} />
                 </div>
                 <div className="login-form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password"
+                    <input type="password" name="password" id="password" placeholder="Password"  autoComplete='current-password'
                         value={loggedUser?.password}
                         onChange={handleChangeLogin} />
                 </div>
