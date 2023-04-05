@@ -7,7 +7,7 @@
 }
 body {
   font-family: "PT Sans Narrow", sans-serif;
-  background: #f5f5f5;
+  background: #f5fffa;
   overflow: hidden;
 }
 .login-form {
@@ -19,6 +19,8 @@ body {
   border-radius: 5px;
   display: grid;
   grid-template-rows: 40% 60%;
+  /* border-radius: 50px; */
+  box-shadow: 27px 27px 53px #c5c5c5, -27px -27px 53px #fbfbfb;
 }
 
 .header > img {
@@ -34,13 +36,14 @@ body {
   padding: 10px;
 }
 
-.login-form-group {
+.login-form-group, .signup-form-group {
   display: flex;
   flex-direction: column;
   color: #f5f5f5;
 }
 
-.login-form-group > input {
+.login-form-group > input,
+.signup-form-group > input {
   height: 40px;
   border-radius: 5px;
   border: none;
@@ -53,17 +56,20 @@ body {
   letter-spacing: 1.5px;
 }
 
-.login-form-group > input:focus {
+.login-form-group > input:focus,
+.signup-form-group > input:focus {
   outline: none;
 }
 
-.login-form-group > label {
+.login-form-group > label,
+.signup-form-group > label {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.5px;
 }
 
-.login-form-group > #button {
+.login-form-group > #button,
+.signup-form-group > #button {
   height: 40px;
   border-radius: 5px;
   border: none;
@@ -104,3 +110,33 @@ body {
   cursor: pointer;
   text-decoration: #f1d302 underline;
 }
+
+/* sign up section
+ */
+
+.signup-form {
+  background-image: url("https://i.pinimg.com/564x/e6/72/dc/e672dc04b83e142066e7ce0fcb3a7ae1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 580px;
+  margin: 60px auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  box-shadow: 27px 27px 53px #c5c5c5, -27px -27px 53px #fbfbfb;
+}
+#signup {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 15% 10%;
+  padding: 10px;
+  align-items: center;
+  background-color: #011936;
+  border-radius: 5px;
+  height: 100%;
+}
+
+
+
