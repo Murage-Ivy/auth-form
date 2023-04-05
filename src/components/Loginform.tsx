@@ -1,22 +1,38 @@
 import { useContext } from 'react'
 import '../App.css'
 import { UserContext } from '../context/UserContext'
-function Loginform() {
-    const user = useContext(UserContext)
 
+function Loginform() {
+    const { loggedUser, setLoggedUser } = useContext(UserContext)
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target
+        setLoggedUser(prevState => ({
+            ...prevState,
+            [name]: value,
+            username: prevState?.username ?? '',
+            password: prevState?.password ?? ''
+        }))
+    }
+
+ const handleSubmit = () => {
+    console.log('submit')
+ }
     return (
         <div className='login-form'>
             <div className="header">
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d7d39b93-5c9e-4a35-9e32-0166b29e6ada/d5wotdb-424c4560-4a1e-4d60-b531-0dca44fa20c5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q3ZDM5YjkzLTVjOWUtNGEzNS05ZTMyLTAxNjZiMjllNmFkYVwvZDV3b3RkYi00MjRjNDU2MC00YTFlLTRkNjAtYjUzMS0wZGNhNDRmYTIwYzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5ZVYEnaCzkFGcnIlDICxpVGlGO7-yi949W0goK3NBes" alt="pokemon" />
             </div>
-            <form id="login">
+            <form id="login" onSubmit={handleSubmit}>
                 <div className="login-form-group">
                     <label htmlFor="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username" value={user?.loggedUser?.username} />
+                    <input type="text" name="username" id="username" placeholder="Username" value={loggedUser?.username} onChange={handleChange} />
                 </div>
                 <div className="login-form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" value={user?.loggedUser?.password} />
+                    <input type="password" name="password" id="password" placeholder="Password"
+                        value={loggedUser?.password}
+                        onChange={handleChange} />
                 </div>
 
                 <div className="login-form-group">
