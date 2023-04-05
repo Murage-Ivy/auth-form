@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../App.css'
 import { UserContext } from '../context/UserContext'
 
@@ -24,7 +24,7 @@ function Loginform() {
                 </div>
                 <div className="login-form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password"  autoComplete='current-password'
+                    <input type="password" name="password" id="password" placeholder="Password" autoComplete='current-password'
                         value={loggedUser?.password}
                         onChange={handleChangeLogin} />
                 </div>
@@ -34,7 +34,7 @@ function Loginform() {
                 </div>
 
                 <div className="footer">
-                    <p>Don't have an account?<span>Sign up</span></p>
+                    <p>Don't have an account?<NavLink to="/signup"><span>Sign up</span></NavLink></p>
                 </div>
             </form>
         </div>

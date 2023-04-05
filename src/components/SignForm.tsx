@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 
 function SignForm() {
@@ -43,7 +44,7 @@ function SignForm() {
           <input id='button' type="submit" value="Sign Up" />
         </div>
         <div className="footer">
-          <p>Already have an account?<span>Log in</span></p>
+          <p>Already have an account?<NavLink to="/login"><span>Log in</span></NavLink></p>
         </div>
       </form>
     </div>
