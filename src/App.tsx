@@ -3,7 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import Loginform from './components/Loginform';
+import PokemonContainer from './components/PokemonContainer';
 import SignForm from './components/SignForm';
+import { PokemonContextProvider } from './context/PokemonContext';
 import { UserContextProvider } from './context/UserContext';
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
 
         </Routes>
       </UserContextProvider>
+      <PokemonContextProvider>
+        <PokemonContainer />
+      </PokemonContextProvider>
     </div>
   );
 }
