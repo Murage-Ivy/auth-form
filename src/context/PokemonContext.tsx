@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 
 type PokeContextProviderProps = {
     children: React.ReactNode
@@ -58,11 +58,12 @@ export const PokemonContextProvider = ({ children }: PokeContextProviderProps) =
         setPokemons(data.results)
     }
 
-    const fetchPokemon = async (pokemonUrl: string) => {
+    const fetchPokemon = useCallback(async (pokemonUrl: string) => {
         const response = await fetch(`${pokemonUrl}`)
         const data = await response.json()
         setPokemon([...pokemon, data])
-    }
+    }, [pokemon])
+
 
     useEffect(() => {
         fetchPokemons()
