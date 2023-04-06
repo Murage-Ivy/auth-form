@@ -20,11 +20,12 @@ function Loginform() {
                         autoComplete='username'
                         placeholder="Username"
                         value={loggedUser?.username}
-                        onChange={handleChangeLogin} />
+                        onChange={handleChangeLogin}
+                        required />
                 </div>
                 <div className="login-form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" autoComplete='current-password'
+                    <input type="password" name="password" id="password" placeholder="Password" autoComplete='current-password' required
                         value={loggedUser?.password}
                         onChange={handleChangeLogin} />
                 </div>

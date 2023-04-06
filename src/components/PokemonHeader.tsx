@@ -1,14 +1,18 @@
+import { useNavigate } from "react-router-dom"
 
 
 function PokemonHeader() {
+    const navigate = useNavigate();
     return (
         <div className="pokemon-header">
             <div className="header-section">
                 <h1 id="logo">Poke<span>mon.</span></h1>
-                <button id="logout">Log Out</button>
+                <button id="logout" onClick={() => {
+                    sessionStorage.removeItem('user')
+                    navigate('/')
+                }}>Log Out</button>
             </div>
 
-            {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon" />\ */}
             <div className="top-section">
                 <div className="left-side">
                     <h2>Welcome to our Pokemon website</h2>

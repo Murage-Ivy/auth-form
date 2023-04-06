@@ -40,6 +40,7 @@ function PokemonContainer() {
         totalPokemons={pokemon.length}
         paginate={paginate}
       />
+
     </>
 
   )

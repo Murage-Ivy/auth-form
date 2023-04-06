@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type UserContextProviderProps = {
     children: React.ReactNode
@@ -40,7 +41,7 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
         password: '',
         password_confirmation: ''
     })
-
+    const navigate = useNavigate()
     const handleChangeLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target
         setLoggedUser(prevState => ({
@@ -58,6 +59,7 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
     }
 
     const handleSubmitSignup = (event: React.MouseEvent<HTMLFormElement>) => {
+        sessionStorage.setItem('user', JSON.stringify(signedUser))
         event.preventDefault()
         console.log(signedUser)
         setSignedUser({
@@ -66,14 +68,16 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
             password_confirmation: ''
         })
 
+        navigate('/')
     }
+
     const handleSubmitLogin = (event: React.MouseEvent<HTMLFormElement>) => {
         event.preventDefault()
-        console.log(loggedUser)
         setLoggedUser({
             username: '',
             password: ''
         })
+        navigate('/pokemon')
     }
 
 

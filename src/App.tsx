@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
 import './App.css';
-import Home from './components/Home';
 import Loginform from './components/Loginform';
 import PokemonContainer from './components/PokemonContainer';
 import SignForm from './components/SignForm';
@@ -13,22 +11,11 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <UserContextProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-
-          <Route path="login" element={<Loginform />} />
-          <Route path="signup" element={<SignForm />} />
-
-        </Routes>
-      </UserContextProvider>
-      <PokemonContextProvider>
-        <Routes>
-          <Route path="pokemon" element={<PokemonContainer />} />
-        </Routes>
-      </PokemonContextProvider>
-
-
+      <Routes>
+        <Route path="/" element={<UserContextProvider><Loginform /></UserContextProvider>} />
+        <Route path="/signup" element={<UserContextProvider><SignForm /></UserContextProvider>} />
+        <Route path="/pokemon" element={<PokemonContextProvider><PokemonContainer /></PokemonContextProvider>} />
+      </Routes>
     </div>
   );
 }
