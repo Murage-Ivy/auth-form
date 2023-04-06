@@ -1,14 +1,21 @@
 
 import { useContext } from 'react'
 import { PokemonContext } from '../context/PokemonContext'
+import PokemonCard from './PokemonCard'
+
 
 function PokemonContainer() {
   const { pokemon } = useContext(PokemonContext)
+  const pokemonList = pokemon?.map((pokemonInfo) => {
+    return <PokemonCard key={pokemonInfo.id} pokemonInfo={pokemonInfo} />
 
-  console.log(pokemon?.[0])
+  })
+
+
+
   return (
-    <div>
-
+    <div className='pokemon-container'>
+      {pokemonList}
     </div>
   )
 }

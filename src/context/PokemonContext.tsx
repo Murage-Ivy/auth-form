@@ -9,20 +9,20 @@ type PokemonContextType = {
     setPokemon: React.Dispatch<React.SetStateAction<any>>
 }
 
-type PokemonProps = {
+export type PokemonProps = {
     name: string,
-    url: string,
+    sprites: {
+        front_default: string,
+        back_default: string
+    },
+    weight:number,
+    height:number,
     id: number,
-    image: string,
     types: string[],
     stats: {
-        hp: number,
-        attack: number,
-        defense: number,
-        speed: number,
-        specialAttack: number,
-        specialDefense: number
-    }
+        base_stat: number,
+        effort: number,
+    }[]
 }
 
 type PokemonsArrayType = {

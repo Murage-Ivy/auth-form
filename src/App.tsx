@@ -11,15 +11,15 @@ import { UserContextProvider } from './context/UserContext';
 function App() {
   return (
     <div className="App">
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
 
           <Route path="login" element={<Loginform />} />
           <Route path="signup" element={<SignForm />} />
 
         </Routes>
-      </UserContextProvider>
+      </UserContextProvider> */}
       <PokemonContextProvider>
         <PokemonContainer />
       </PokemonContextProvider>
