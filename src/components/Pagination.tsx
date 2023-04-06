@@ -1,5 +1,7 @@
 // import React, { useEffect, useState } from 'react'
 
+import { Link } from "react-router-dom"
+
 
 type PaginationProps = {
     pokemonPerPage: number,
@@ -16,10 +18,10 @@ function Pagination({ pokemonPerPage, totalPokemons, paginate }: PaginationProps
     }
     return (
         <div>
-            <ul>
+            <ul className="pagination">
                 {pageNumbers.map(number => (
                     <li key={number}>
-                        <a onClick={() => paginate(number)} href="#">{number}</a>
+                        <Link className="number" onClick={() => paginate(number)} to="#">{number}</Link>
                     </li>
                 ))}
 
