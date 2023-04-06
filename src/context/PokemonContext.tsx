@@ -69,6 +69,7 @@ export const PokemonContextProvider = ({ children }: PokeContextProviderProps) =
         fetchPokemons()
 
     }, [])
+    
     useEffect(() => {
         pokemons.map(pokemon => fetchPokemon(pokemon.url))
     }, [pokemons, fetchPokemon])
