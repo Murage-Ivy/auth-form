@@ -3,12 +3,12 @@ import { useContext } from 'react'
 import { PokemonContext } from '../context/PokemonContext'
 
 function PokemonContainer() {
-    const {pokemons, pokemon} = useContext(PokemonContext)
-    // console.log(pokemons)
-    console.log(pokemon)
+  const { pokemon } = useContext(PokemonContext)
+
+  console.log(pokemon?.[0])
   return (
     <div>
-        
+
     </div>
   )
 }

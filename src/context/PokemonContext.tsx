@@ -1,4 +1,4 @@
-import { createContext, useCallback, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 type PokeContextProviderProps = {
     children: React.ReactNode
@@ -7,8 +7,6 @@ type PokeContextProviderProps = {
 type PokemonContextType = {
     pokemon: PokemonProps[] | null,
     setPokemon: React.Dispatch<React.SetStateAction<any>>
-    pokemons: PokemonsArrayType[] | null,
-    setPokemons: React.Dispatch<React.SetStateAction<any>>
 }
 
 type PokemonProps = {
@@ -40,39 +38,47 @@ export const PokemonContext = createContext<PokemonContextType>({} as PokemonCon
 export const PokemonContextProvider = ({ children }: PokeContextProviderProps) => {
     const [pokemon, setPokemon] = useState<Array<PokemonProps>>([])
 
-    const [pokemons, setPokemons] = useState<Array<PokemonsArrayType>>([])
 
-
-
-    const value = {
-        pokemon,
-        pokemons,
-        setPokemon,
-        setPokemons
-
-    }
 
     const fetchPokemons = async () => {
         const response = await fetch('https://pokeapi.co/api/v2/pokemon')
         const data = await response.json()
-        setPokemons(data.results)
+        data.results?.map(async (pokemonurl: PokemonsArrayType) => {
+
+            const response = await fetch(`${pokemonurl.url}`)
+            const data = await response.json()
+            setPokemon(prevPokemon => [...prevPokemon, data])
+
+        })
     }
 
-    const fetchPokemon = useCallback(async (pokemonUrl: string) => {
-        const response = await fetch(`${pokemonUrl}`)
-        const data = await response.json()
-        setPokemon([...pokemon, data])
-    }, [pokemon])
 
 
     useEffect(() => {
         fetchPokemons()
 
     }, [])
-    
-    useEffect(() => {
-        pokemons.map(pokemon => fetchPokemon(pokemon.url))
-    }, [pokemons, fetchPokemon])
+
+
+    const value = {
+        pokemon,
+        setPokemon,
+    }
+
+
+
+
+
+    // const fetchPokemon = useCallback(async (pokemonUrl: string) => {
+    //     const response = await fetch(`${pokemonUrl}`)
+    //     const data = await response.json()
+    //     setPokemon([...pokemon, data])
+    // }, [pokemon])
+
+
+
+
+
 
 
     return (
