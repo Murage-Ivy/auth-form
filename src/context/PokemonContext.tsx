@@ -18,11 +18,6 @@ export type PokemonProps = {
     weight:number,
     height:number,
     id: number,
-    types: string[],
-    stats: {
-        base_stat: number,
-        effort: number,
-    }[]
 }
 
 type PokemonsArrayType = {
