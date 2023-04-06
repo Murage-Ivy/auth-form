@@ -8,7 +8,8 @@ import SignForm from './components/SignForm';
 import { PokemonContextProvider } from './context/PokemonContext';
 import { UserContextProvider } from './context/UserContext';
 
-function App() {
+const App: React.FC = () => {
+  
   return (
     <div className="App">
       {/* <UserContextProvider>

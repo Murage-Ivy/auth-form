@@ -5,7 +5,7 @@ type PokeContextProviderProps = {
 }
 
 type PokemonContextType = {
-    pokemon: PokemonProps[] | null,
+    pokemon: PokemonProps[],
     setPokemon: React.Dispatch<React.SetStateAction<any>>
 }
 
@@ -15,8 +15,8 @@ export type PokemonProps = {
         front_default: string,
         back_default: string
     },
-    weight:number,
-    height:number,
+    weight: number,
+    height: number,
     id: number,
 }
 
@@ -59,23 +59,6 @@ export const PokemonContextProvider = ({ children }: PokeContextProviderProps) =
         pokemon,
         setPokemon,
     }
-
-
-
-
-
-    // const fetchPokemon = useCallback(async (pokemonUrl: string) => {
-    //     const response = await fetch(`${pokemonUrl}`)
-    //     const data = await response.json()
-    //     setPokemon([...pokemon, data])
-    // }, [pokemon])
-
-
-
-
-
-
-
     return (
         <PokemonContext.Provider value={value}>
             {children}

@@ -4,12 +4,6 @@ import { PokemonProps } from '../context/PokemonContext'
 type PokemonCardProps = {
     pokemonInfo: PokemonProps
 }
-type VisibleProps = {
-    visible: boolean
-
-}
-
-
 
 function PokemonCard({ pokemonInfo }: PokemonCardProps) {
 
@@ -18,7 +12,7 @@ function PokemonCard({ pokemonInfo }: PokemonCardProps) {
         setVisible(prevState => !prevState)
         console.log(event.currentTarget)
     }
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState<boolean>(false)
 
     return (
         <div className='pokemon-card' onClick={handleClick}>
