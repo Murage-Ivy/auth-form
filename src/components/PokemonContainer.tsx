@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import { PokemonContext } from '../context/PokemonContext'
 import Pagination from './Pagination'
 import PokemonCard from './PokemonCard'
+import PokemonHeader from './PokemonHeader'
 
 
 function PokemonContainer() {
@@ -30,7 +31,8 @@ function PokemonContainer() {
 
   return (
     <>
-      <div className='pokemon-container'>
+      <PokemonHeader />
+      <div id='pokemon-container'>
         {pokemonList}
       </div>
       <Pagination
