@@ -7,10 +7,8 @@ import PokemonCard from './PokemonCard'
 
 function PokemonContainer() {
   const { pokemon } = useContext(PokemonContext)
-
-
   const [currentPage, setCurrentPage] = useState<number>(1)
-  const [pokemonPerPage] = useState<number>(12)
+  const [pokemonPerPage] = useState<number>(8)
 
 
 
