@@ -20,10 +20,9 @@ You’re probably already aware that it can be hard to find the right restaurant
 To solve this problem,  I have decided to create a restaurant finder app that helps people who are new to the area and looking for a good place to eat. Through sharing the restaurants details and also the food that they serve. You can judged how good the restaurant is from the reviews that users share.
 
 ## Project Features
-* Home Page - First page user sees when they visit the site which contains all the restaurants
-* Login Page - Logs in user to use the application
-* Sign Up page - Registers user to use the application
-* Restaurant Page - Displayes a single restaurant, its dishes and reviews.
+* Login Page - Logs in user to use the website
+* Sign Up page - Registers user to use the website
+* Pokemon  Page - Displays pokemons.
 
 
 ## Objective of the project
@@ -36,8 +35,7 @@ To solve this problem,  I have decided to create a restaurant finder app that he
 
 ## Technologies Used
 * React - it was used to design, structure and add content to the web pages
-* Ruby on rails - it was used to create the backend part of the application
-* Netlify - it was used for deployment
+* Vercel - it was used for deployment
 
 ## Installation
 * Fork the repo and clone it on your machine using  the following command in your terminal:
