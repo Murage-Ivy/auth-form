@@ -86,8 +86,7 @@ Ivy Wambui Murage
 
 ## License  
 MIT
-Copyright (c) 2022 **Ivy Murage**
+Copyright (c) 2023 **Ivy Murage**
 
-## Acknowledgments
-* Moringa School
+
   
