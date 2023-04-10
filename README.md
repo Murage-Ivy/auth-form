@@ -73,12 +73,8 @@ Built using TypeScript, the website provides a user-friendly interface that make
 [creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 
-
 ## Bugs & Fixes / Feature request
-In case you find a bug, kindly open an issue [here](https://github.com/Murage-Ivy/restro/issues/new). Include your query and your expected results.
-
-## Date of current version 
-7/12/2022
+In case you find a bug, kindly open an issue [here](https://github.com/Murage-Ivy/auth-form/issues/new). Include your query and your expected results.
 
 
 ## Author
@@ -87,6 +83,3 @@ Ivy Wambui Murage
 ## License  
 MIT
 Copyright (c) 2023 **Ivy Murage**
-
-
-  
