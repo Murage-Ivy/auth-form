@@ -1,16 +1,15 @@
 
-# Restro
+# POKEMON
 
 # Table of Contents
 
 1. [Introduction](#shamba-shape-up)
 2. [Project Features](#project-features)
-3. [Objectives of the project](#objectives-of-the-project)
-4. [Technologies](#technologies-used)
-5. [Installation](#installation)
-6. [Contributions](#contributions)
-7. [Author](#author)
-8. [Bugs & Feature Request](#bugs--fixes--feature-request)
+3. [Technologies](#technologies-used)
+4. [Installation](#installation)
+5. [Contributions](#contributions)
+6. [Author](#author)
+7. [Bugs & Feature Request](#bugs--fixes--feature-request)
 
 
 # Pokemon
@@ -27,22 +26,16 @@ Built using TypeScript, the website provides a user-friendly interface that make
 * Pokemon  Page - Displays pokemons.
 
 
-## Objective of the project
-* Logs in user to the posts page when there credentials are verified
-* Signs up user to enable the use the application
-* User can post questions on the posts page
-* User can comment on a particular post
-* User are logged out when they click the log out button
 
 
 ## Technologies Used
-* React - it was used to design, structure and add content to the web pages
+* React && Typescript - it was used to design, structure and add content to the web pages
 * Vercel - it was used for deployment
 
 ## Installation
 * Fork the repo and clone it on your machine using  the following command in your terminal:
   <br/> 
-  `git clone [<path to  repo>](https://github.com/Murage-Ivy/restro)`
+  `git clone [<path to  repo>](https://github.com/Murage-Ivy/auth-form)`
 * Navgiate to the cloned repo
   <br/>
   `cd /restro` 
@@ -80,8 +73,6 @@ Built using TypeScript, the website provides a user-friendly interface that make
 [creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 
-### Link To Backend Repo
-[Backend Repo](https://github.com/Murage-Ivy/restro-backend)
 
 ## Bugs & Fixes / Feature request
 In case you find a bug, kindly open an issue [here](https://github.com/Murage-Ivy/restro/issues/new). Include your query and your expected results.
