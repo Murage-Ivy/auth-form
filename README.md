@@ -13,11 +13,13 @@
 8. [Bugs & Feature Request](#bugs--fixes--feature-request)
 
 
-# Restro
+# Pokemon
 #### Brief description of application
-You’re probably already aware that it can be hard to find the right restaurant and some times when you do and visit it, you find that it is not what you expected.You've been searching for a new restaurant to try, but it's hard to tell which ones are good. What if you could just go online and find them instantly? 
+Welcome to the Pokemon website, a simple yet engaging platform designed to showcase your favorite Pokemon characters and enable you to login or sign up to access exclusive content.
 
-To solve this problem,  I have decided to create a restaurant finder app that helps people who are new to the area and looking for a good place to eat. Through sharing the restaurants details and also the food that they serve. You can judged how good the restaurant is from the reviews that users share.
+Built using TypeScript, the website provides a user-friendly interface that makes it easy to browse through a variety of Pokemon species and view their attributes and characteristics. Whether you're a longtime fan of the franchise or just getting started with your Pokemon journey, our website has something for everyone.
+
+
 
 ## Project Features
 * Login Page - Logs in user to use the website
